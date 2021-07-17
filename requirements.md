@@ -44,10 +44,10 @@
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | TC1 | INA219 power reading is nonzero | Run poweronly.py script, monitor printed output | N/A | Power value greater than 0 watts | TBD | TBD | R1 |
 | TC2 | Voltage constant within 7V and 12V for 30 seconds | Run poweronly.py script, monitor printed output for 30 seconds | N/A | TBD | TDB | R2 |
-| TC3 | BME680 temperature attribute is not null | | | | TBD | TBD | R3 |
-| TC4 | BME680 humidity attribute is not null | | | | TBD | TBD | R4 |
-| TC5 | BME680 pressure attribute is not null | | | | TBD | TBD | R5 |
-| TC6 | BME680 gas resistance attribute is not null | | | | TBD | TBD | R6 |
+| TC3 | BME680 temperature attribute is not null | Print temperature value | Serial.print(bme680.temperature) | Non-null value | TBD | TBD | R3 |
+| TC4 | BME680 humidity attribute is not null | Print humidity attribute | Serial.print(bme680.humidity) | Non-null value | TBD | TBD | R4 |
+| TC5 | BME680 pressure attribute is not null | Print pressure attribute | Serial.print(bme680.pressure) | Non-null value | | TBD | TBD | R5 |
+| TC6 | BME680 gas resistance attribute is not null | Print gas resistance attribute | Serial.print(bme680.gas_resistance) | Non-null value | TBD | TBD | R6 |
 | TC7 | Serial communication is alive | | | | TBD | TBD | R7 |
 | TC8 | Temperature value is between 0° and 65° Celsius | Set temperature value to 35° C | temperature = 35 | "Temperature is within the full accuracy range for the humidity and pressure sensors" printed to serial | TBD | TBD | R8 |
 | TC9 | Temperature is greater than 65° Celsius | Set temperature value to 75° C | temperature = 75 | "Temperature has exceeded 65° C. Temperature is outside the full accuracy range for the humidity and pressure sensors" printed to serial | TBD | TBD | R9 |
