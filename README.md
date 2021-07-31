@@ -1,1 +1,2 @@
-# RoomMonitor
+# GreenRoom
+GreenRoom is an experiment designed to reduce power consumption of a cyber-physical system through run-time testing techniques. GreenRoom consists of a monitoring device - an Arduino Metro & a BME680 sensor - that records data about the ambient temperature, humidity, pressure, and gas concentrations in a room. A Raspberry Pi records the power consumption of the monitoring device, and generates visualization of the data.
