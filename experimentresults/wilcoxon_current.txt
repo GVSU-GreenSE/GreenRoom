@@ -1,0 +1,6 @@
+Wilcoxon p-values for current
+Baseline v. All tests, main cycle: 2.664327621459961e-05
+Baseline v. All tests, downtime: 1.8298625946044922e-05
+Baseline v. All tests, main cycle & downtime: 5.960464477539063e-08
+
+Statistically different
