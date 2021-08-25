@@ -44,8 +44,8 @@ for file in os.listdir():
       lines = csv.reader(csvfile, delimiter=",")
       for row in lines:
         datasum = datasum + float(row[index])
-      baseline_avgs.append(float('{0:0.4f}'.format(datasum / 61)))
-      print ("Replicate " + str(counter) + ": " + str(float('{0:0.4f}'.format(datasum / 61))))
+      baseline_avgs.append(datasum / 61)
+      print ("Replicate " + str(counter) + ": " + str(datasum / 61)
       datasum = 0
       counter += 1
 counter = 1  
@@ -61,8 +61,8 @@ for file in os.listdir():
       lines = csv.reader(csvfile, delimiter=",")
       for row in lines:
         datasum = datasum + float(row[index])
-      all_main_avgs.append(float('{0:0.4f}'.format(datasum / 61)))
-      print ("Replicate " + str(counter) + ": " + str(float('{0:0.4f}'.format(datasum / 61))))
+      all_main_avgs.append(datasum / 61)
+      print ("Replicate " + str(counter) + ": " + str(datasum / 61)
       datasum = 0
       counter += 1
 counter = 1  
@@ -78,8 +78,8 @@ for file in os.listdir():
       lines = csv.reader(csvfile, delimiter=",")
       for row in lines:
         datasum = datasum + float(row[index])
-      all_downtime_avgs.append(float('{0:0.4f}'.format(datasum / 61)))
-      print ("Replicate " + str(counter) + ": " + str(float('{0:0.4f}'.format(datasum / 61))))
+      all_downtime_avgs.append(datasum / 61)
+      print ("Replicate " + str(counter) + ": " + str(datasum / 61)
       datasum = 0
       counter += 1
 counter = 1  
@@ -95,14 +95,14 @@ for file in os.listdir():
       lines = csv.reader(csvfile, delimiter=",")
       for row in lines:
         datasum = datasum + float(row[index])
-      all_both_avgs.append(float('{0:0.4f}'.format(datasum / 61)))
-      print ("Replicate " + str(counter) + ": " + str(float('{0:0.4f}'.format(datasum / 61))))
+      all_both_avgs.append(datasum / 61)
+      print ("Replicate " + str(counter) + ": " + str(datasum / 61)
       datasum = 0
       counter += 1
 counter = 1  
     
 #Wilcoxon
-print("Wilcoxon p-values")
+print("Wilcoxon p-values for " + title)
 stat, pvalue = wilcoxon(baseline_avgs, all_main_avgs)
 print("Baseline v. All tests, main cycle: " + str(pvalue))
 stat, pvalue = wilcoxon(baseline_avgs, all_downtime_avgs)

@@ -5,7 +5,7 @@ import time
 from ina219 import INA219
 
 counter = 0
-numreadings = 30
+numreadings = 60
 
 #create INA219 object
 ina = INA219(shunt_ohms=0.1,
@@ -25,18 +25,18 @@ ser.flushInput()    #Clear the queue
 timestamp = time.strftime("%Y-%m-%d_%H-%M", time.localtime())
 
 #Prompt user for input about the experiment specifics
-with open('record_v3.txt', "a") as f:
+with open('record.txt', "a") as f:
   f.write(timestamp)
   print("Config: ")
   config = input()
-  f.write(", Config: " + config + " - 10s frequency\n")
+  f.write(", Config: " + config + "\n")
 
 #Runs until keyboard interrupt
 while True:
   #take power readings, save for later
   v = ina.voltage()
   i = ina.current()
-  p = ina.power() /1000
+  p = ina.power() / 1000
   
   #Read from serial and decode
   ser_bytes = ser.readline()
