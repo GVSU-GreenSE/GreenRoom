@@ -1,6 +1,0 @@
-Wilcoxon p-values for power
-Baseline v. All tests, main cycle: 0.022541258667558565
-Baseline v. All tests, downtime: 0.0001398921012878418
-Baseline v. All tests, main cycle & downtime: 5.960464477539063e-08
-
-Statistically different
