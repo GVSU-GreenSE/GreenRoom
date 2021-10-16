@@ -1,0 +1,3 @@
+Wilcoxon p-values comparing baseline (no tests) and all tests, both cycles (p < 0.05)
+Current: 0.083251953125
+Power: 0.063720703125
